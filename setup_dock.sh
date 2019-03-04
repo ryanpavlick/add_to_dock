@@ -4,6 +4,7 @@ source ./add_to_dock.sh
 clear_dock
 
 add_app_to_dock "System Preferences"
+add_app_to_dock "Activity Monitor"
 add_spacer_to_dock
 add_app_to_dock "Microsoft Outlook"
 add_app_to_dock "Google Chrome"
