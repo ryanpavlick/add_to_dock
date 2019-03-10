@@ -60,7 +60,6 @@ function add_folder_to_dock {
       shift
   done
 
-  folder_path=$(echo $folder_path | sed -e "s:~:${HOME}:1")
   if [ -d "$folder_path" ]; then
       echo "$folder_path added to the Dock."
       defaults write com.apple.dock persistent-others -array-add "<dict>
@@ -77,7 +76,7 @@ function add_folder_to_dock {
               <key>tile-type</key> <string>directory-tile</string>
           </dict>"
   else
-      echo "ERROR: $1 not found." 1>&2
+      echo "ERROR: $folder_path not found."
   fi
 }
 
